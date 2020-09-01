@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Output</title>
+    <style>
+#customers {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+    </style>
+</head>
+<body>
+
+<table id="customers">
+    <tr>
+        <th>Product</th>
+        <th>Year</th>
+        <th>Min</th>
+        <th>Max</th>
+        <th>Avg</th>
+    </tr>
+    {% for product in productname %}
+    <tr>
+        <td>{{product.0}}</td>
+        <td>{{product.1}}</td>
+        <td>{{product.2}}</td>
+        <td>{{product.3}}</td>
+        <td>{{product.4}}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+</body>
+</html>
